@@ -1,1 +1,1 @@
-// Reserved for future interactions (filters, search, analytics hooks).
+// Interaction hooks can be added here as this site evolves.
