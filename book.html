@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Send a booking enquiry for Chrispin Mwaba's keynotes, workshops, panels, interviews, and leadership programmes." />
+  <title>Book Chrispin | Chrispin Mwaba</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 fill=%27%23000%27/%3E%3Cpath d=%27M7 38 L18 27 L24 33 L34 15 L46 36 L56 29 L62 38 L7 38 Z%27 fill=%27none%27 stroke=%27%23fff%27 stroke-width=%273.5%27 stroke-linejoin=%27miter%27/%3E%3Cpath d=%27M30 50 L34 50 L34 43 L38 50 L42 43 L42 50 L46 50 L46 38 L41 38 L38 45 L35 38 L30 38 Z%27 fill=%27%23fff%27/%3E%3Cpath d=%27M22 38 L30 38 L30 34 L23 34 Q17 34 17 42 Q17 50 23 50 L30 50 L30 46 L23 46 Q21 46 21 42 Q21 38 23 38 Z%27 fill=%27%23fff%27/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="booking-page">
+  <header class="site-header">
+    <a href="index.html#home" class="logo" aria-label="Chrispin Mwaba home">
+      <svg class="brand-logo" viewBox="0 0 760 260" role="img" aria-label="Chrispin Mwaba logo">
+        <rect width="760" height="260" rx="18"></rect>
+        <g class="brand-mountains">
+          <path d="M78 122 L147 67 L186 105 L257 36 L322 105 L430 14 L552 122 L652 70 L724 122"></path>
+          <path d="M147 67 L122 118 L167 84 L154 103 L186 105"></path>
+          <path d="M257 36 L230 113 L282 69 L267 95 L322 105"></path>
+          <path d="M430 14 L391 116 L450 67 L436 102 L552 122"></path>
+          <path d="M652 70 L625 118 L671 88 L661 106 L724 122"></path>
+          <path d="M58 126 L704 126"></path>
+        </g>
+        <text class="brand-name" x="380" y="184" text-anchor="middle">ChrispinMwaba</text>
+        <path class="brand-rule" d="M110 218 H338 M422 218 H650"></path>
+        <text class="brand-initials" x="380" y="226" text-anchor="middle">CM</text>
+      </svg>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav" id="navMenu">
+      <a href="index.html#about">About</a>
+      <a href="index.html#speaking">Speaking</a>
+      <a href="index.html#advisory">Advisory</a>
+      <a href="index.html#topics">Topics</a>
+    </nav>
+
+    <a href="#bookingForm" class="header-button">Book Chrispin</a>
+  </header>
+
+  <main>
+    <section class="booking-hero">
+      <div class="booking-intro reveal">
+        <p class="eyebrow"><span></span> Booking enquiry</p>
+        <h1>Book Chrispin to speak or advise</h1>
+        <p>
+          Tell us about your event, organisation or strategic consultation request. The team will review your enquiry and respond with availability and next steps.
+        </p>
+        <div class="booking-details" aria-label="Booking process">
+          <div><strong>01</strong><span>Share your brief</span></div>
+          <div><strong>02</strong><span>Confirm availability</span></div>
+          <div><strong>03</strong><span>Shape the experience</span></div>
+        </div>
+      </div>
+
+      <div class="booking-panel reveal">
+        <p class="section-label">Start your enquiry</p>
+        <h2>Event details</h2>
+        <p class="booking-panel-copy">Fields marked with <span aria-hidden="true">*</span> are required.</p>
+
+        <form class="booking-form" id="bookingForm">
+          <div class="form-grid">
+            <label>
+              Full name <span aria-hidden="true">*</span>
+              <input type="text" name="fullName" autocomplete="name" required />
+            </label>
+            <label>
+              Work email <span aria-hidden="true">*</span>
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+            <label>
+              Organisation
+              <input type="text" name="organisation" autocomplete="organization" />
+            </label>
+            <label>
+              Phone number
+              <input type="tel" name="phone" autocomplete="tel" />
+            </label>
+            <label>
+              Enquiry type <span aria-hidden="true">*</span>
+              <select name="enquiryType" required>
+                <option value="">Select an option</option>
+                <option>Keynote speaking</option>
+                <option>Leadership development</option>
+                <option>Innovation workshop</option>
+                <option>Panel or interview</option>
+                <option>Media commentary</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label>
+              Preferred event date
+              <input type="date" name="eventDate" />
+            </label>
+            <label>
+              Event location
+              <input type="text" name="location" placeholder="City, country, or virtual" />
+            </label>
+            <label>
+              Estimated audience size
+              <input type="number" name="audienceSize" min="1" placeholder="e.g. 250" />
+            </label>
+            <label class="full-field">
+              Tell us about the event <span aria-hidden="true">*</span>
+              <textarea name="eventDetails" rows="6" placeholder="Share the event goals, audience, format, and any topics you would like Chrispin to cover." required></textarea>
+            </label>
+          </div>
+
+          <label class="consent-field">
+            <input type="checkbox" name="consent" required />
+            <span>I agree to be contacted about this booking enquiry. <span aria-hidden="true">*</span></span>
+          </label>
+
+          <button type="submit" class="btn btn-light booking-submit">Send booking enquiry</button>
+          <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-logo">Chrispin<br />Mwaba</div>
+    <p>© 2026 Chrispin Mwaba. Tech Entrepreneur and Speaker.</p>
+
+    <div class="footer-social" aria-label="Social media links">
+      <div class="social-group">
+        <h3>Techgenuity</h3>
+        <a href="https://za.linkedin.com/company/techgenuity-digital-hub" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://x.com/TechgenuityD" target="_blank" rel="noopener noreferrer">Twitter / X</a>
+        <a href="https://www.instagram.com/techg.enuity/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+      <div class="social-group">
+        <h3>Technomix ICT</h3>
+        <a href="https://za.linkedin.com/company/technomix-ict" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://x.com/Technomixict" target="_blank" rel="noopener noreferrer">Twitter / X</a>
+        <a href="https://www.instagram.com/technomix_ict/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#speaking">Speaking</a>
+      <a href="index.html#book">Book</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
