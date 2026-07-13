@@ -20,7 +20,6 @@ document.querySelectorAll("[data-logo-fallbacks]").forEach((logo) => {
     logo.hidden = true;
     logo.nextElementSibling?.classList.add("visible");
   });
-});
 
 if (menuToggle && navMenu) {
   menuToggle.addEventListener("click", () => {
