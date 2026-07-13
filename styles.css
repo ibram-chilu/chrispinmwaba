@@ -186,13 +186,6 @@ img {
   letter-spacing: -4px;
 }
 
-.hero-text {
-  max-width: 680px;
-  margin-top: 32px;
-  font-size: 21px;
-  line-height: 1.65;
-  color: rgba(255, 255, 255, 0.82);
-}
 
 .hero-actions {
   display: flex;
@@ -724,9 +717,6 @@ footer p {
     letter-spacing: -2px;
   }
 
-  .hero-text {
-    font-size: 17px;
-  }
 
   .stats,
   .service-grid,
@@ -994,14 +984,6 @@ footer p {
   max-width: 900px;
 }
 
-.hero-name {
-  color: #8abfff;
-  font-size: clamp(22px, 2.4vw, 34px);
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 18px;
-}
 
 .hero h1 {
   max-width: 930px;
@@ -1010,7 +992,6 @@ footer p {
   letter-spacing: -3px;
 }
 
-.hero-text,
 .hero-mission {
   max-width: 780px;
   margin-top: 24px;
@@ -1254,4 +1235,93 @@ footer p {
 
 footer {
   flex-wrap: wrap;
+}
+
+/* INVESTMENT DROPDOWN */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-toggle {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.nav-dropdown-toggle::after {
+  content: "▾";
+  margin-left: 7px;
+  font-size: 10px;
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 16px);
+  left: 50%;
+  min-width: 190px;
+  display: grid;
+  gap: 4px;
+  padding: 10px;
+  background: #050505;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 16px;
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 8px);
+  transition: 0.2s ease;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
+.nav-dropdown-menu a {
+  padding: 12px 14px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+.nav-dropdown-menu a:hover,
+.nav-dropdown-menu a:focus {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 1050px) {
+  .nav.active .nav-dropdown {
+    width: 100%;
+  }
+
+  .nav.active .nav-dropdown-toggle {
+    width: 100%;
+    padding: 18px 0;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .nav.active .nav-dropdown-menu {
+    position: static;
+    display: grid;
+    padding: 0 0 8px 18px;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+  }
+
+  .nav.active .nav-dropdown-menu a {
+    padding: 12px 0;
+  }
 }
