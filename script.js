@@ -5,6 +5,22 @@ const bookingForm = document.getElementById("bookingForm");
 const formMessage = document.getElementById("formMessage");
 const revealElements = document.querySelectorAll(".reveal");
 
+
+document.querySelectorAll("[data-logo-fallbacks]").forEach((logo) => {
+  const fallbacks = logo.dataset.logoFallbacks.split("|").filter(Boolean);
+  let fallbackIndex = 0;
+
+  logo.addEventListener("error", () => {
+    if (fallbackIndex < fallbacks.length) {
+      logo.src = fallbacks[fallbackIndex];
+      fallbackIndex += 1;
+      return;
+    }
+
+    logo.hidden = true;
+    logo.nextElementSibling?.classList.add("visible");
+  });
+
 if (menuToggle && navMenu) {
   menuToggle.addEventListener("click", () => {
     const isOpen = navMenu.classList.toggle("active");
